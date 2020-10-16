@@ -20,4 +20,10 @@ public class TestController {
         System.out.println(test);
         return test;
     }
+
+    @GetMapping(value = "/testHello")
+    @ApiOperation(value = "测试")
+    public String testHello() {
+        return "helloworld";
+    }
 }

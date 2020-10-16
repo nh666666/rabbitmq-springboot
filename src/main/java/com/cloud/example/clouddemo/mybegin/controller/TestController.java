@@ -32,4 +32,11 @@ public class TestController {
     public String testfwxnc() {
         return "testfwxnc123457891011";
     }
+
+    @GetMapping(value = "/testWjk")
+    @ApiOperation(value = "测试")
+    public String testWjk() {
+        return "wjkkarry";
+    }
+
 }

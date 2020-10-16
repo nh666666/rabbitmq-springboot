@@ -24,6 +24,6 @@ public class TestController {
     @GetMapping(value = "/testHello")
     @ApiOperation(value = "测试")
     public String testHello() {
-        return "helloworld++++23";
+        return "helloworld++++2345";
     }
 }

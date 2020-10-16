@@ -26,4 +26,10 @@ public class TestController {
     public String testHello() {
         return "helloworld++++2345678910";
     }
+
+    @GetMapping(value = "/testfwxnc")
+    @ApiOperation(value = "测试")
+    public String testfwxnc() {
+        return "testfwxnc";
+    }
 }

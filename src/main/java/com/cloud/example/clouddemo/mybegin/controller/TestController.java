@@ -30,6 +30,6 @@ public class TestController {
     @GetMapping(value = "/testfwxnc")
     @ApiOperation(value = "测试")
     public String testfwxnc() {
-        return "testfwxnc123457";
+        return "testfwxnc1234578910";
     }
 }

@@ -24,7 +24,7 @@ public class TestController {
     @GetMapping(value = "/testWjk")
     @ApiOperation(value = "测试")
     public String testWjk() {
-        return "wjkkarry 是很好看的 boy 说的对";
+        return "wjkkarry 是很好看的 boy 说的对最好看";
     }
 
 }

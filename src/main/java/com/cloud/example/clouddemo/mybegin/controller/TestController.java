@@ -21,22 +21,10 @@ public class TestController {
         return test;
     }
 
-    @GetMapping(value = "/testHello")
-    @ApiOperation(value = "测试")
-    public String testHello() {
-        return "helloworld++++2345678910";
-    }
-
-    @GetMapping(value = "/testfwxnc")
-    @ApiOperation(value = "测试")
-    public String testfwxnc() {
-        return "testfwxnc123457891011";
-    }
-
     @GetMapping(value = "/testWjk")
     @ApiOperation(value = "测试")
     public String testWjk() {
-        return "wjkkarry";
+        return "wjkkarry 是很好看的 boy";
     }
 
 }

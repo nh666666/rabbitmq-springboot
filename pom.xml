@@ -156,11 +156,48 @@
 	</dependencies>
 
 	<build>
+		<!--<finalName>demotest1022</finalName>-->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<!--<plugin>-->
+				<!--<groupId>com.spotify</groupId>-->
+				<!--<artifactId>docker-maven-plugin</artifactId>-->
+				<!--<version>1.2.2</version>-->
+				<!--<configuration>-->
+					<!--<imageName>${project.artifactId}</imageName>-->
+					<!--<imageTags>-->
+						<!--<imageTag>latest</imageTag>-->
+					<!--</imageTags>-->
+					<!--&lt;!&ndash;指定Dockerfile路径&ndash;&gt;-->
+					<!--<dockerDirectory>${project.basedir}</dockerDirectory>-->
+					<!--<dockerHost>http://localhost:2375</dockerHost>-->
+					<!--<resources>-->
+						<!--<resource>-->
+							<!--<targetPath>/</targetPath>-->
+							<!--<directory>${project.build.directory}</directory>-->
+							<!--&lt;!&ndash;${project.artifactId}-${project.version}&ndash;&gt;-->
+							<!--<include>${project.build.finalName}.jar</include>-->
+						<!--</resource>-->
+					<!--</resources>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.3.6</version>
+				<configuration>
+					<repository>${project.artifactId}</repository>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 </project>

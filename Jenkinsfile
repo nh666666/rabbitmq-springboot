@@ -17,17 +17,5 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/${branch}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: "${git_auth}", url: 'https://github.com/nh666666/clouddemo.git']]])
             }
         }
-        stage('buile project') {
-            //定义镜像名称
-
-            steps {
-                bat "mvn clean install"
-                bat "mvn -f ${project_name} clean package dockerfile:build"
-            }
-        }
-        stage('publish project') {
-            steps {
-            }
-        }
     }
 }

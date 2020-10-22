@@ -4,6 +4,8 @@ def git_auth = "c696df5c-fbe7-4ec4-9274-80dfb58a3de3"
 //构建版本的名称
 def tag = "latest"
 
+def project_name = "test1022"
+
 
 pipeline {
     agent any

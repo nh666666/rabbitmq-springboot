@@ -19,7 +19,7 @@ pipeline {
             def imageName = "${project_name}:${tag}"
             steps {
                 bat "mvn clean install"
-                bat sh "mvn -f ${project_name} clean package dockerfile:build"
+                bat "mvn -f ${project_name} clean package dockerfile:build"
             }
         }
         stage('publish project') {

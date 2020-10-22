@@ -17,5 +17,10 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/${branch}']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: "${git_auth}", url: 'https://github.com/nh666666/clouddemo.git']]])
             }
         }
+        stage('buile project') {
+        	steps {
+        		bat "mvn clean install"
+        	}
+        }
     }
 }

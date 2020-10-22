@@ -20,7 +20,7 @@ pipeline {
         }
         stage('生成镜像') {
             steps {
-                bat 'mvn -f ${project_name} dockerfile:build'
+                bat 'mvn -f ${project_name} docker:build'
             }
         }
     }

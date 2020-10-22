@@ -6,6 +6,7 @@ def tag = "latest"
 
 def project_name = "test1022"
 
+def imageName = "${project_name}:${tag}"
 
 pipeline {
     agent any
@@ -18,7 +19,7 @@ pipeline {
         }
         stage('buile project') {
             //定义镜像名称
-            def imageName = "${project_name}:${tag}"
+
             steps {
                 bat "mvn clean install"
                 bat "mvn -f ${project_name} clean package dockerfile:build"

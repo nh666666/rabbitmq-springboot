@@ -37,10 +37,10 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("drone  RESTful API")
+                .title("rabbitmq  RESTful API")
                 .version("0.0.1")
                 .description("API 描述")
-                .contact(new Contact("niehan","eb","331105094@qq.com"))
+                .contact(new Contact("han","xxxx","xxxxx@qq.com"))
                 .build();
     }
 
